@@ -10,8 +10,6 @@ import { GraphQLSchema, GraphQLObjectType } from 'graphql';
 
 import * as userQueries from './user/queries';
 import * as userMutations from './user/mutations';
-import * as storyQueries from './story/queries';
-import * as storyMutations from './story/mutations';
 import { nodeField, nodesField } from './Node';
 
 export default new GraphQLSchema({
@@ -21,7 +19,6 @@ export default new GraphQLSchema({
       node: nodeField,
       nodes: nodesField,
       ...userQueries,
-      ...storyQueries,
     },
   }),
 
@@ -29,7 +26,6 @@ export default new GraphQLSchema({
     name: 'Mutation',
     fields: {
       ...userMutations,
-      ...storyMutations,
     },
   }),
 });

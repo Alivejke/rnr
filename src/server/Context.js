@@ -11,7 +11,7 @@ import DataLoader from 'dataloader';
 
 import db from './db';
 import Validator from './Validator';
-import { mapTo, mapToMany, mapToValues } from './utils';
+import { mapTo, mapToMany } from './utils';
 import { UnauthorizedError, ForbiddenError, ValidationError } from './errors';
 
 class Context {
@@ -111,59 +111,6 @@ class Context {
       .select()
       .then(mapToMany(keys, x => x.user_id)),
   );
-
-  storyById = new DataLoader(keys =>
-    db
-      .table('stories')
-      .whereIn('id', keys)
-      .select()
-      .then(rows => {
-        rows.forEach(x => this.storyBySlug.prime(x.slug, x));
-        return rows;
-      })
-      .then(mapTo(keys, x => x.id)),
-  );
-
-  storyBySlug = new DataLoader(keys =>
-    db
-      .table('stories')
-      .whereIn('slug', keys)
-      .select()
-      .then(rows => {
-        rows.forEach(x => this.storyById.prime(x.id, x));
-        return rows;
-      })
-      .then(mapTo(keys, x => x.slug)),
-  );
-
-  storyPointsCount = new DataLoader(keys =>
-    db
-      .table('stories')
-      .leftJoin('story_points', 'story_points.story_id', 'stories.id')
-      .whereIn('stories.id', keys)
-      .groupBy('stories.id')
-      .select('stories.id', db.raw('count(story_points.user_id)::int'))
-      .then(mapToValues(keys, x => x.id, x => parseInt(x.count, 10))),
-  );
-
-  storyPointGiven = new DataLoader(keys => {
-    const { id: userId } = this.user;
-
-    return db
-      .table('stories')
-      .leftJoin('story_points', function join() {
-        this.on('story_points.story_id', 'stories.id').andOn(
-          'story_points.user_id',
-          db.raw('?', [userId]),
-        );
-      })
-      .whereIn('stories.id', keys)
-      .select(
-        'stories.id',
-        db.raw('(story_points.user_id IS NOT NULL) AS given'),
-      )
-      .then(mapToValues(keys, x => x.id, x => x.given));
-  });
 }
 
 export default Context;

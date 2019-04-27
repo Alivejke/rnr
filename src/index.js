@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
 import qs from 'query-string';
 import createBrowserHistory from 'history/createBrowserHistory';
 
-import App from './common/App';
+import App from './components/App/App';
 import createRelay from './createRelay';
 import * as serviceWorker from './serviceWorker';
 import router from './router';

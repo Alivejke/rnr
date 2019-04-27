@@ -10,10 +10,10 @@ import React from 'react';
 import { QueryRenderer } from 'react-relay';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
-import theme from '../theme';
-import ErrorPage from './ErrorPage';
-import { gtag, getScrollPosition } from '../utils';
-import { ConfigContext, HistoryContext, ResetContext } from '../hooks';
+import theme from '../../theme';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import { gtag, getScrollPosition } from '../../utils';
+import { ConfigContext, HistoryContext, ResetContext } from '../../hooks';
 
 class App extends React.PureComponent {
   static getDerivedStateFromError(error) {

@@ -24,21 +24,6 @@ router.get(
   }),
 );
 
-router.get(
-  '/login/facebook',
-  passport.authenticate('facebook', {
-    scope: ['public_profile', 'email'],
-  }),
-);
-
-router.get(
-  '/login/facebook/return',
-  passport.authenticate('facebook', {
-    successRedirect: '/login?success',
-    failureRedirect: '/login?error=something+went+wrong',
-  }),
-);
-
 router.post('/login/clear', (req, res) => {
   req.logOut();
   res.sendStatus(200);

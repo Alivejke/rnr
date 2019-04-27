@@ -24,8 +24,6 @@ export default new GraphQLObjectType({
         name: 'AuthenticationProvider',
         values: {
           GOOGLE: { value: 'google' },
-          TWITTER: { value: 'twitter' },
-          FACEBOOK: { value: 'facebook' },
         },
       }),
       resolve: self => self.provider,
@@ -45,24 +43,20 @@ export default new GraphQLObjectType({
           return null;
         }
 
-        switch (self.provider) {
-          case 'facebook':
-            return idx(self, x => x.profile.email);
-          default:
-            return null;
-        }
+        // switch (self.provider) {
+        //   default:
+        //     return null;
+        // }
       },
     },
 
     displayName: {
       type: GraphQLString,
       resolve(self) {
-        switch (self.provider) {
-          case 'facebook':
-            return idx(self, x => x.profile.name);
-          default:
-            return null;
-        }
+        // switch (self.provider) {
+        //   default:
+        return null;
+        // }
       },
     },
 
@@ -72,8 +66,6 @@ export default new GraphQLObjectType({
         switch (self.provider) {
           case 'google':
             return idx(self, x => x.profile.image.url);
-          case 'facebook':
-            return idx(self, x => x.profile.picture.data.url);
           default:
             return null;
         }
@@ -86,8 +78,6 @@ export default new GraphQLObjectType({
         switch (self.provider) {
           case 'google':
             return idx(self, x => x.profile.url);
-          case 'facebook':
-            return idx(self, x => x.profile.link);
           default:
             return null;
         }

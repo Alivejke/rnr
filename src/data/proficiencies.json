@@ -1,0 +1,317 @@
+[
+  {
+    "id": 0,
+    "name": "Акробат",
+    "primaryAttribute": 3,
+    "secondaryAttribute": 0,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 1,
+    "name": "Атлет",
+    "primaryAttribute": 0,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 2,
+    "name": "Кузнец",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 0,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 3,
+    "name": "1 Рук",
+    "primaryAttribute": 1,
+    "secondaryAttribute": 5,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 4,
+    "name": "Кожевник",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 5,
+    "name": "Ткач",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 6,
+    "name": "Зачарование",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 10,
+    "useWithoutLearning": "нет"
+  },
+  {
+    "id": 7,
+    "name": "Ювелир",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 8,
+    "name": "Художник",
+    "primaryAttribute": 10,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 9,
+    "name": "Музыкант",
+    "primaryAttribute": 10,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 10,
+    "name": "Следопыт",
+    "primaryAttribute": 10,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 11,
+    "name": "Моряк",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 12,
+    "name": "Алхимик",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 5,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 13,
+    "name": "Повар",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 14,
+    "name": "Языковед",
+    "primaryAttribute": 6,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 15,
+    "name": "Лжец",
+    "primaryAttribute": 9,
+    "secondaryAttribute": 5,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 16,
+    "name": "Скрытность",
+    "primaryAttribute": 3,
+    "secondaryAttribute": 5,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 17,
+    "name": "Дипломат",
+    "primaryAttribute": 9,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 18,
+    "name": "Торговец",
+    "primaryAttribute": 9,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 19,
+    "name": "Камнетёс",
+    "primaryAttribute": 0,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 20,
+    "name": "Земледелец",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 21,
+    "name": "Скотовод",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 22,
+    "name": "Писатель",
+    "primaryAttribute": 6,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 23,
+    "name": "Строитель",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 24,
+    "name": "Первая помощь",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 25,
+    "name": "Наездник",
+    "primaryAttribute": 1,
+    "secondaryAttribute": 0,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 26,
+    "name": "Распознать ложь",
+    "primaryAttribute": 10,
+    "secondaryAttribute": 6,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 27,
+    "name": "Скульптор",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 10,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 28,
+    "name": "Гончар",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 29,
+    "name": "Плотник",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 30,
+    "name": "Философ",
+    "primaryAttribute": 6,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 31,
+    "name": "Певец",
+    "primaryAttribute": 9,
+    "secondaryAttribute": 10,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 32,
+    "name": "Математик",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 6,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 33,
+    "name": "Приручение животных",
+    "primaryAttribute": 9,
+    "secondaryAttribute": 10,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 34,
+    "name": "Теолог",
+    "primaryAttribute": 8,
+    "secondaryAttribute": 6,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 35,
+    "name": "Пивовар/винодел",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 10,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 36,
+    "name": "Стеклодув",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 37,
+    "name": "Инженер-механик",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 38,
+    "name": "Пловец",
+    "primaryAttribute": 2,
+    "secondaryAttribute": 3,
+    "useWithoutLearning": "штраф -4"
+  },
+  {
+    "id": 39,
+    "name": "Актёр",
+    "primaryAttribute": 9,
+    "secondaryAttribute": 7,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 40,
+    "name": "Могильщик",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 41,
+    "name": "Поэт",
+    "primaryAttribute": 10,
+    "secondaryAttribute": 6,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 42,
+    "name": "Рудокоп",
+    "primaryAttribute": 0,
+    "secondaryAttribute": 2,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 43,
+    "name": "Верхолаз",
+    "primaryAttribute": 0,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "да"
+  },
+  {
+    "id": 44,
+    "name": "Рыбак",
+    "primaryAttribute": 7,
+    "secondaryAttribute": 1,
+    "useWithoutLearning": "штраф -4"
+  }
+]

@@ -6,9 +6,8 @@
 
 /* @flow */
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { ReactRelayContext } from 'react-relay';
-import { fb } from './utils';
 
 // Default history object (for unit tests)
 const history = { location: { pathname: '/' } };
@@ -31,11 +30,4 @@ export function useRelay() {
 
 export function useReset() {
   return useContext(ResetContext);
-}
-
-export function useFacebookEvent(event, callback, deps = []) {
-  useEffect(() => {
-    fb(FB => FB.Event.subscribe(event, callback), { async: false });
-    return fb(FB => FB.Event.unsubscribe(event, callback), { async: false });
-  }, deps);
 }

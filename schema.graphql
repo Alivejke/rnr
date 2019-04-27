@@ -1,32 +1,5 @@
 enum AuthenticationProvider {
   GOOGLE
-  TWITTER
-  FACEBOOK
-}
-
-type Comment implements Node {
-  # The ID of an object
-  id: ID!
-  story: Story!
-  parent: Comment
-  author: User!
-  comments: [Comment]
-  text: String
-  pointsCount: Int!
-  createdAt(format: String): String
-  updatedAt(format: String): String
-}
-
-input CreateStoryInput {
-  title: String
-  text: String
-  validateOnly: Boolean
-  clientMutationId: String
-}
-
-type CreateStoryPayload {
-  story: Story
-  clientMutationId: String
 }
 
 input DeleteUserInput {
@@ -50,27 +23,12 @@ type Identity {
   profileURL: String
 }
 
-input LikeStoryInput {
-  id: ID!
-  clientMutationId: String
-}
-
-type LikeStoryPayload {
-  story: Story
-  clientMutationId: String
-}
-
 type Mutation {
   # Update user.
   updateUser(input: UpdateUserInput!): UpdateUserPayload
 
   # Delete user.
   deleteUser(input: DeleteUserInput!): DeleteUserPayload
-
-  # Create a new story.
-  createStory(input: CreateStoryInput!): CreateStoryPayload
-  updateStory(input: UpdateStoryInput!): UpdateStoryPayload
-  likeStory(input: LikeStoryInput!): LikeStoryPayload
 }
 
 # An object with an ID
@@ -109,38 +67,6 @@ type Query {
   me: User
   user(username: String!): User
   users(after: String, first: Int): UserConnection
-  story(slug: String!): Story
-  stories: [Story]
-}
-
-type Story implements Node {
-  # The ID of an object
-  id: ID!
-  author: User!
-  slug: String!
-  title: String!
-  text(truncate: Int): String!
-  isURL: Boolean!
-  comments: [Comment]
-  pointsCount: Int!
-  pointGiven: Boolean!
-  commentsCount: Int!
-  createdAt(format: String): String
-  updatedAt(format: String): String
-}
-
-input UpdateStoryInput {
-  id: ID!
-  title: String
-  text: String
-  approved: Boolean
-  validateOnly: Boolean
-  clientMutationId: String
-}
-
-type UpdateStoryPayload {
-  story: Story
-  clientMutationId: String
 }
 
 input UpdateUserInput {

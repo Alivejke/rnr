@@ -31,13 +31,6 @@ export default {
     apiKey: process.env.GCP_BROWSER_KEY,
   },
 
-  // Facebook SDK for JavaScript (src/utils/fb.js)
-  // https://developers.facebook.com/docs/javascript/quickstart
-  facebook: {
-    appId: process.env.FACEBOOK_APP_ID,
-    pageId: process.env.FACEBOOK_PAGE_ID,
-  },
-
   // Analytics
   gaTrackingId: process.env.GA_TRACKING_ID,
 };

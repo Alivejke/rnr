@@ -1,0 +1,172 @@
+[
+  {
+    "id": 0,
+    "name": "Владение оружием",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "skillTypes": [
+        {
+          "type": "Оружейный",
+          "level": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "name": "Отторжение магии",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 5,
+          "level": 5
+        },
+        {
+          "id": 6,
+          "level": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Нырок",
+    "passive": false,
+    "description": "",
+    "requirements": null
+  },
+  {
+    "id": 3,
+    "name": "Шаг в сторону",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": [3, 4],
+          "level": 6
+        },
+        {
+          "id": [5, 7],
+          "level": 6
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Удачливый кузнец",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 7,
+          "level": 5
+        }
+      ],
+      "proficiencies": [
+        {
+          "id": 2,
+          "level": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "name": "Яростный удар",
+    "passive": false,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 10,
+          "level": 3
+        }
+      ],
+      "custom": ["Ранение персонажа или его союзника"]
+    }
+  },
+  {
+    "id": 6,
+    "name": "Кавалерист",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 1,
+          "level": 6
+        }
+      ],
+      "proficiencies": [
+        {
+          "id": 25,
+          "level": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "name": "Бывалый",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 6,
+          "level": 5
+        }
+      ],
+      "proficiencies": [
+        {
+          "id": 26,
+          "level": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "name": "Суровый монтажник",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 0,
+          "level": 6
+        }
+      ],
+      "proficiencies": [
+        {
+          "id": 23,
+          "level": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Кровотечение",
+    "passive": true,
+    "description": "",
+    "requirements": {
+      "attributes": [
+        {
+          "id": 0,
+          "level": 5
+        },
+        {
+          "id": 1,
+          "level": 5
+        }
+      ]
+    }
+  }
+]

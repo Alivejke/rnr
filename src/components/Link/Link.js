@@ -7,7 +7,7 @@
 /* @flow */
 
 import React from 'react';
-import { useHistory } from '../hooks';
+import { useHistory } from '../../hooks';
 
 function isLeftClickEvent(event) {
   return event.button === 0;

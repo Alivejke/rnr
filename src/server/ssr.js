@@ -6,14 +6,10 @@
 
 /* @flow */
 
-import React from 'react';
-import ReactDOM from 'react-dom/server';
 import qs from 'query-string';
 import serialize from 'serialize-javascript';
-import createHistory from 'history/createMemoryHistory';
 import { Router } from 'express';
 
-import App from '../common/App';
 import config from './config';
 import templates from './templates';
 import routes from '../router';
@@ -32,7 +28,6 @@ router.get('/static/*', (req, res) => {
 router.get('*', async (req, res, next) => {
   try {
     const { path: pathname, originalUrl: url } = req;
-    const history = createHistory({ initialEntries: [pathname] });
     const relay = createRelay(req);
 
     // Prefer using the same query string parser in both
@@ -48,19 +43,6 @@ router.get('*', async (req, res, next) => {
       return;
     }
 
-    let body;
-
-    // Full server-side rendering for some routes like landing pages etc.
-    if (route.ssr === true) {
-      try {
-        body = ReactDOM.renderToString(
-          <App {...route} config={config} history={history} relay={relay} />,
-        );
-      } catch (err) {
-        console.error(err);
-      }
-    }
-
     res.send(
       templates.ok({
         url: `${process.env.APP_ORIGIN}${req.path}`,
@@ -71,7 +53,6 @@ router.get('*', async (req, res, next) => {
           stats.entrypoints.main.assets,
         ),
         data: serialize(route.payload, { isJSON: true }),
-        body,
         config: JSON.stringify(config),
         env: process.env,
       }),

@@ -9,23 +9,9 @@
 import UniversalRouter from 'universal-router';
 import { fetchQuery } from 'relay-runtime';
 
-import landing from './landing';
-import legal from './legal';
-import misc from './misc';
-import user from './user';
-import news from './news';
+import home from './views/home';
 
-const routes = [
-  ...landing,
-  ...legal,
-  ...misc,
-  ...user,
-  ...news,
-  {
-    path: '/admin',
-    children: () => import(/* webpackChunkName: 'admin' */ './admin'),
-  },
-];
+const routes = [...home];
 
 function resolveRoute(ctx) {
   const { route, params, relay } = ctx;

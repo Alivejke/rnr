@@ -10,8 +10,8 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-import Link from './Link';
-import { useHistory } from '../hooks';
+import Link from '../Link/Link';
+import { useHistory } from '../../hooks';
 
 const color = '#607d8b';
 
